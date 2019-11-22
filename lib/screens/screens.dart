@@ -119,9 +119,10 @@ class _ScreensState extends State<Screens> with ShakeHandler {
       controller: _pageController,
     );
     final bottomBar = BottomNavigationBar(
-      unselectedItemColor: Color(0xFFB1E1C1),
-      backgroundColor: Color(0xFF99CCCC),
-      selectedItemColor: Colors.black45,
+      unselectedItemColor: Color.fromRGBO(255,255,255,1.0),
+      backgroundColor: Color.fromRGBO(60,40,40,1.0),
+      selectedItemColor: Color.fromRGBO(205, 180, 180, 1.0),
+
       items: [
         BottomNavigationBarItem(
           title: Text(""),
@@ -138,7 +139,7 @@ class _ScreensState extends State<Screens> with ShakeHandler {
     );
     return Scaffold(
       body: pages,
-      backgroundColor: Color(0xFFB1E1C1),
+      backgroundColor: Color.fromRGBO(255, 240, 240, 1.0),
       bottomNavigationBar: bottomBar,
     );
   }

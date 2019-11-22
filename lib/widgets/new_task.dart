@@ -50,6 +50,7 @@ class _NewTaskState extends State<NewTask> with ShakeHandler {
       initialDate: DateTime.now(),
       firstDate: DateTime(2019),
       lastDate: (DateTime.now()),
+    
     ).then((pickedDate) {
       if (pickedDate == null) {
         return;
@@ -96,8 +97,8 @@ class _NewTaskState extends State<NewTask> with ShakeHandler {
               ),
               RaisedButton(
                 child: Text('Add Task'),
-                color: Theme.of(context).primaryColor,
-                textColor: Theme.of(context).textTheme.button.color,
+                color: Color.fromRGBO(205, 180, 180, 1.0),
+                textColor: Colors.white,
                 onPressed: _submitData,
               )
             ],

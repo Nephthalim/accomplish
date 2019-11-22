@@ -20,17 +20,18 @@ class _TaskListState extends State<TaskList> {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        SizedBox(
-          height: 25,
-        ),
-        ClipRRect(
-          borderRadius: BorderRadius.circular(10.0),
-          child: Container(
-            width: 100,
-            height: 25,
-            color: Color(0xFF99CCCC),
-            child: Center(
-              child: Text("Task"),
+        
+        Padding(
+          padding: const EdgeInsets.all(30.0),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(10.0),
+            child: Container(
+              width: 100,
+              height: 25,
+              color: Color.fromRGBO(225, 200, 200, 1.0),
+              child: Center(
+                child: Text("Task"),
+              ),
             ),
           ),
         ),
