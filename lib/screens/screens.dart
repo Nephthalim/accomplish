@@ -125,11 +125,11 @@ class _ScreensState extends State<Screens> with ShakeHandler {
 
       items: [
         BottomNavigationBarItem(
-          title: Text(""),
+          title: Text("Task"),
           icon: Icon(Icons.check_box_outline_blank),
         ),
         BottomNavigationBarItem(
-          title: Text(""),
+          title: Text("Done"),
           icon: Icon(Icons.check),
         ),
       ],

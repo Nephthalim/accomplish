@@ -48,8 +48,8 @@ class _NewTaskState extends State<NewTask> with ShakeHandler {
     showDatePicker(
       context: context,
       initialDate: DateTime.now(),
-      firstDate: DateTime(2019),
-      lastDate: (DateTime.now()),
+      firstDate: (DateTime.now()),
+      lastDate: DateTime(2025),
     
     ).then((pickedDate) {
       if (pickedDate == null) {

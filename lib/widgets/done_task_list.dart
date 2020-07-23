@@ -15,7 +15,6 @@ class DoneTaskList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        
         Padding(
           padding: const EdgeInsets.all(30.0),
           child: ClipRRect(
@@ -31,18 +30,16 @@ class DoneTaskList extends StatelessWidget {
         _doneTasks.isEmpty
             ? LayoutBuilder(
                 builder: (ctx, constraints) {
-                  return Column(
-                    children: <Widget>[
-                      SizedBox(
-                        height: 250,
+                  return Container(
+                    height: MediaQuery.of(context).size.height -
+                        MediaQuery.of(context).padding.top -
+                        117,
+                    child: Center(
+                      child: Text(
+                        "No tasks done yet",
+                        style: Theme.of(context).textTheme.headline6,
                       ),
-                      Center(
-                        child: Text(
-                          "No tasks done yet",
-                          style: Theme.of(context).textTheme.title,
-                        ),
-                      )
-                    ],
+                    ),
                   );
                 },
               )

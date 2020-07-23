@@ -1,4 +1,4 @@
-package com.example.personal_expenses_app;
+package com.example.accomplish;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;

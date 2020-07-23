@@ -20,7 +20,6 @@ class _TaskListState extends State<TaskList> {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        
         Padding(
           padding: const EdgeInsets.all(30.0),
           child: ClipRRect(
@@ -38,26 +37,22 @@ class _TaskListState extends State<TaskList> {
         widget._usertasks.isEmpty
             ? LayoutBuilder(
                 builder: (ctx, constraints) {
-                  return Column(
-                    children: <Widget>[
-                      SizedBox(
-                        height: 250,
-                      ),
-                      Center(
+                  return Container(
+                      height: MediaQuery.of(context).size.height -
+                          MediaQuery.of(context).padding.top -
+                          117,
+                      child: Center(
                         child: Text(
                           "Shake to add task.",
-                          style: Theme.of(context).textTheme.title,
+                          style: Theme.of(context).textTheme.headline6,
                         ),
-                      )
-                    ],
-                  );
+                      ));
                 },
               )
             : Container(
                 height: (MediaQuery.of(context).size.height -
-                        325 -
-                        MediaQuery.of(context).padding.top) *
-                    0.7,
+                    325 -
+                    MediaQuery.of(context).padding.top),
                 child: ListView(
                   children: widget._usertasks
                       .map((task) => TaskItem(

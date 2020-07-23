@@ -31,7 +31,7 @@ class _DoneTaskItemState extends State<DoneTaskItem> {
       child: ListTile(
         title: Text(
           widget.task.title,
-          style: Theme.of(context).textTheme.title,
+          style: Theme.of(context).textTheme.headline6
         ),
         subtitle: Text(
           DateFormat.yMMMd().format(widget.task.date),
